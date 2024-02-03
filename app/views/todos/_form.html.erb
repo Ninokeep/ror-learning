@@ -1,0 +1,22 @@
+
+<%= form_with model: @todo do |form| %>
+<div>
+    <%= form.label :message %><br>
+    <%= form.text_field :message %>
+    <%= @todo.errors.full_messages_for(:message).each do |m| %>
+        <div> <%= m %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :done %><br>
+    <%= form.check_box :done %>
+    <%= @todo.errors.full_messages_for(:done).each do |m| %>
+        <div> <%= m %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

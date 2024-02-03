@@ -1,0 +1,11 @@
+
+<h1> Todo list items : </h1>
+<ul>
+  <%@todos.each do |item|%>
+    <li>
+
+        <a href="<%= todo_path(item.id) %>">  <%= item.message %>  </a>
+    </li>
+  <% end %>
+</ul>
+
